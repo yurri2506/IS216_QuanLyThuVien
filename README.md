@@ -1,183 +1,194 @@
-# [IS216.P23] - ĐỒ ÁN XÂY DỰNG WEBSITE QUẢN LÝ THƯ VIỆN
 
-Website quản lý thư viện hỗ trợ quản lý sách, người dùng, và các giao dịch mượn trả sách một cách hiệu quả, với giao diện riêng cho người dùng và quản trị viên.
+# [IS216.P23] - LIBRARY MANAGEMENT WEBSITE PROJECT
 
-> 🔗 Link GitHub repository: [https://github.com/yurri2506/IS216_QuanLyThuVien](https://github.com/yurri2506/IS216_QuanLyThuVien)
+The library management website supports efficient management of books, users, and borrowing/returning transactions, with separate interfaces for users and administrators.
 
----
-
-## 📋 Mục lục
-
-- Giới thiệu nhóm
-- Thành viên
-- Công nghệ sử dụng
-- Yêu cầu trước khi cài đặt
-- Hướng dẫn cài đặt
-- Cấu hình cơ sở dữ liệu
-- Cấu hình bổ sung
-- Lưu ý khi chạy project
+> 🔗 GitHub repository: [https://github.com/yurri2506/IS216_QuanLyThuVien](https://github.com/yurri2506/IS216_QuanLyThuVien)
 
 ---
 
-## 🎓 Giới thiệu nhóm
+## 📋 Table of Contents
 
-- **Trường**: Đại học Công nghệ Thông tin, Đại học Quốc gia TP. HCM (ĐHQG-HCM)
-- **Khoa**: Hệ Thống Thông Tin
-- **GVHD**: ThS. Tạ Việt Phương
-- **Nhóm sinh viên thực hiện**: Nhóm 8386
-
----
-
-## 👥 Thành viên
-
-| STT | Họ tên                | MSSV     | Chức vụ       |
-|-----|-----------------------|----------|---------------|
-| 1   | Nguyễn Lê Thanh Huyền | 22520590 | Nhóm trưởng   |
-| 2   | Lê Thị Phương Thảo    | 23521468 | Thành viên    |
-| 3   | Lê Thị Thùy Trang     | 23521627 | Thành viên    |
-| 4   | Nguyễn Thanh Trí      | 23521645 | Thành viên    |
+- Team Introduction
+- Members
+- Technologies Used
+- Prerequisites
+- Installation Guide
+- Database Configuration
+- Additional Configuration
+- Project Running Notes
 
 ---
 
-## 🛠️ Công nghệ sử dụng
+## 🎓 Team Introduction
 
-- **Frontend**: React.js (Next.js + Tailwind)
-- **Backend**: Java 17+ (Spring Boot), Maven
-- **Database**: Supabase (PostgreSQL)
-- **Dịch vụ bên thứ ba**: Cloudinary (lưu trữ hình ảnh), Gmail SMTP (gửi email)
-- **Công cụ**: Git, VS Code
-- **Tích hợp**: Google OAuth2 (đăng nhập, tùy chọn)
+- **University**: University of Information Technology, VNU-HCM
+- **Faculty**: Information Systems
+- **Supervisor**: MSc. Ta Viet Phuong
+- **Student Group**: Group 8386
 
 ---
 
-## 📦 Yêu cầu trước khi cài đặt
+## 👥 Members
 
-Trước khi bắt đầu, hãy đảm bảo đã cài đặt các phần mềm sau:
-
-- [Node.js](https://nodejs.org/) (phiên bản ≥ 18)
-- [Java](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html) (phiên bản 17+)
-- [Maven](https://maven.apache.org/download.cgi)
-- [Git](https://git-scm.com/downloads)
-- [VS Code](https://code.visualstudio.com/) (khuyến nghị)
-- Tài khoản [Supabase](https://supabase.com/) để cấu hình cơ sở dữ liệu
-- Tài khoản [Cloudinary](https://cloudinary.com/) để lưu trữ hình ảnh
+| No. | Name                    | Student ID | Role         |
+|-----|-------------------------|------------|--------------|
+| 1   | Nguyen Le Thanh Huyen   | 22520590   | Group Leader |
+| 2   | Le Thi Phuong Thao      | 23521468   | Member       |
+| 3   | Le Thi Thuy Trang       | 23521627   | Member       |
+| 4   | Nguyen Thanh Tri        | 23521645   | Member       |
 
 ---
 
-## ⚙️ Hướng dẫn cài đặt
+## 🛠️ Technologies Used
 
-### 1. Clone project về máy
+# LIBRARY MANAGEMENT SYSTEM - IS203
+
+## Full Code Demo Video
+
+👉 [Watch the full code demo video here](https://drive.google.com/file/d/1Jw40BYpVS6QfkU7XH8G8jOz8oaa1mFdb/view?usp=drive_link)
+
+---
+
+## Table of Contents
+- [Introduction](#introduction)
+- [System Architecture](#system-architecture)
+- [Key Features](#key-features)
+  - [Frontend User](#frontend-user)
+  - [Frontend Admin](#frontend-admin)
+  - [Frontend General](#frontend-general)
+  - [Backend](#backend)
+- [Setup & Run Project](#setup--run-project)
+- [Technologies Used](#technologies-used)
+- [Contribution](#contribution)
+
+---
+
+## Introduction
+
+The Library Management System supports managing books, users, borrowing/returning, fines, notifications, online payments, and many other modern features. The system includes 1 backend (Spring Boot) and 3 frontends (Next.js) for admin, user, and general interface.
+
+---
+
+## System Architecture
+
+- **Backend**: Spring Boot RESTful API, database connection, JWT authentication, Cloudinary integration, email sending, Momo payment.
+- **Frontend**:
+  - **Admin**: Administrators manage the entire library.
+  - **User**: Users search, borrow/return books, manage accounts.
+  - **General**: General interface, quick search, QR code scanning.
+
+---
+
+
+## Key Features
+
+### Frontend User
+
+- Register, login, change password, forgot password via email.
+- View book list, book details, search, filter by category.
+- Borrow books, return books, extend borrowing, view borrowing/return history.
+- Manage book cart, add/remove books from cart.
+- View and pay fines online (Momo).
+- Receive notifications (overdue, fines, new books, etc.).
+- Update personal information, avatar.
+- Scan QR code for quick borrow/return.
+- User support chatbox.
+- View system and personal notifications.
+
+### Frontend Admin
+
+- Admin login.
+- Manage books: add, edit, delete, import/export files, upload images.
+- Manage categories, manage book children (book child).
+- Manage users: approve accounts, lock/unlock, statistics.
+- Manage borrow/return, fines, extensions, confirm returns.
+- Manage notifications, send notifications to users.
+- Manage system settings (borrowing rules, fines, time, etc.).
+- General statistics: number of books, users, borrowings, fine revenue.
+- Manage image uploads (Cloudinary).
+- Manage fine payments (Momo).
+- Manage admin accounts.
+
+### Frontend General
+
+- Homepage introducing the library.
+- Quick book search, view book information.
+- Scan QR code for quick search/borrow/return.
+- Beautiful, friendly, responsive interface.
+
+### Backend
+
+- RESTful API for all above features.
+- Authentication, authorization (JWT, role-based).
+- Manage data: books, users, borrow/return, fines, notifications.
+- Integrate Cloudinary for image uploads.
+- Integrate email sending (forgot password, notifications).
+- Integrate Momo payment.
+- Statistics, reporting.
+- Business logic: auto-calculate fines, send overdue notifications, etc.
+- Support import/export data for books, users.
+
+---
+
+## Setup & Run Project
+
+### Backend
 
 ```bash
-git clone https://github.com/yurri2506/IS216_QuanLyThuVien.git
-cd IS216_QuanLyThuVien
+cd backend2/library
+# Configure .env, application.properties as needed
+./mvnw spring-boot:run
 ```
 
-### 2. Cài đặt và chạy backend (Spring Boot)
-
-- Mở thư mục `backend2/library`
-- Chạy lệnh sau để khởi động backend:
-  ```bash
-  ./mvnw spring-boot:run
-  ```
-
-### 3. Cài đặt và chạy frontend
-
-#### 🖥 Frontend cho người dùng (frontend-user)
+### Frontend
 
 ```bash
+# Example for frontend-user
 cd frontend-user
 npm install
 npm run dev
-```
-- Truy cập: [http://localhost:3000](http://localhost:3000)
 
-#### 🛠 Frontend cho quản trị viên (frontend-admin)
-
-```bash
-cd ../frontend-admin
-npm install
-npm run dev
-```
-- Truy cập: [http://localhost:3001](http://localhost:3001)
-
-### 🗂️ Cấu hình môi trường Frontend
-
-- Dự án sử dụng biến môi trường `.env.local` để kết nối Supabase và cấu hình Google OAuth. Tạo file `.env.local` trong thư mục `frontend-user` với nội dung:
-
-```bash
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=<YOUR_SUPABASE_URL>
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<YOUR_SUPABASE_ANON_KEY>
-NEXT_PUBLIC_API_URL="http://localhost:8080"
-# OAuth
-NEXT_PUBLIC_GOOGLE_CLIENT_ID=<YOUR_GOOGLE_CLIENT_ID>
-GOOGLE_CLIENT_SECRET=<YOUR_GOOGLE_CLIENT_SECRET>
-NEXT_PUBLIC_FACEBOOK_APP_ID=<YOUR_FACEBOOK_APP_ID>
-FACEBOOK_CLIENT_SECRET=<YOUR_CLIENT_SECRET>
-
-```
-- Tạo file `.env.local` trong thư mục `frontend-admin` với nội dung:
-```bash
-NEXT_PUBLIC_API_URL="http://localhost:8080"
-```
-
-### 📌 Hướng dẫn lấy thông tin:
- - `Supabase URL & Anon Key`: Vào Supabase → chọn dự án → Settings > API → mục Project API keys.
- - `Google Client ID`: Vào Google Cloud Console → API & Services → Credentials → tạo OAuth Client ID.
-
----
-
-## 🗄️ Cấu hình cơ sở dữ liệu
-
-Dự án sử dụng **Supabase** (dựa trên PostgreSQL) làm cơ sở dữ liệu. Để cấu hình:
-
-1. **Kiểm tra file cấu hình**:
-   - File `application.properties` đã có sẵn trong thư mục `backend2/library/src/main/resources/` khi clone project. File này chứa thông tin kết nối Supabase:
-    ```properties
-    # URL kết nối đến Supabase
-    spring.datasource.url=<YOUR_SUPABASE_URL>
-    # Tên người dùng Supabase
-    spring.datasource.username=<YOUR_SUPABASE_USERNAME>
-    # Mật khẩu Supabase
-    spring.datasource.password=<YOUR_SUPABASE_PASSWORD>
-
-    # Cấu hình driver và Hibernate
-    spring.datasource.driver-class-name=org.postgresql.Driver
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-    spring.jpa.hibernate.ddl-auto=update
-    ```
-   - Lưu ý: Nếu sử dụng tài khoản Supabase khác, hãy đăng ký tại [Supabase](https://supabase.com/), tạo dự án mới, và cập nhật các thông tin trên (URL, username, password) trong file `application.properties`.
-
-2. **Tạo bảng tự động**:
-   - SBackend đã được cấu hình để tự động tạo và cập nhật bảng (với `spring.jpa.hibernate.ddl-auto=update`).
-   - Nếu bạn cần chỉnh sửa bảng thủ công, có thể vào giao diện Supabase (**Settings > Database**) để xem và quản lý.
-
-**Lưu ý**: Kiểm tra kết nối database trước khi chạy backend bằng cách chạy lệnh (ví dụ sử dụng psql):
-```bash
-psql -h <YOUR_SUPABASE_HOST> -p <YOUR_SUPABASE_PORT> -U <YOUR_SUPABASE_USERNAME> -d <YOUR_SUPABASE_DATABASE>
+# Similarly for frontend-admin, frontend-general
 ```
 
 ---
 
-## 🔧 Cấu hình bổ sung
+## Technologies Used
 
-### 1. Cloudinary (Lưu trữ hình ảnh)
+- **Backend**: Java, Spring Boot, Spring Security, JPA, JWT, Cloudinary, Momo API, Email SMTP.
+- **Frontend**: Next.js, React, Redux, TailwindCSS, Axios, Cloudinary, Momo.
+- **Database**: MySQL/PostgreSQL (configurable).
 
-Dự án sử dụng Cloudinary để lưu trữ hình ảnh sách. Cập nhật thông tin Cloudinary trong file `application.properties`:
+---
+
+## Contribution
+
+All contributions, bug reports, or suggestions are welcome via issues or pull requests.
+
+---
+
+If you need more details about the API or usage instructions for each feature, feel free to ask!
+---
+
+## 🔧 Additional Configuration
+
+### 1. Cloudinary (Image Storage)
+
+The project uses Cloudinary to store book images. Update Cloudinary info in `application.properties`:
 
 ```properties
 cloudinary.cloud-name=<YOUR_CLOUDINARY_CLOUD_NAME>
 cloudinary.api-key=<YOUR_CLOUDINARY_API_KEY>
 cloudinary.api-secret=<YOUR_CLOUDINARY_API_SECRET>
 ```
-- Đăng ký tài khoản [Cloudinary](https://cloudinary.com/) và lấy các giá trị trên từ dashboard.
-- Thay các placeholder <YOUR_...> bằng giá trị từ dashboard Cloudinary của bạn.
-- Đảm bảo các API liên quan đến upload hình ảnh được gọi đúng.
+- Register a [Cloudinary](https://cloudinary.com/) account and get the above values from your dashboard.
+- Replace the <YOUR_...> placeholders with your Cloudinary dashboard values.
+- Ensure all image upload APIs are called correctly.
 
-### 2. Email (Gửi thông báo)
+### 2. Email (Notification Sending)
 
-Dự án sử dụng Gmail SMTP để gửi email thông báo. Cập nhật thông tin trong `application.properties`:
+The project uses Gmail SMTP to send notification emails. Update info in `application.properties`:
 
 ```properties
 # Gmail SMTP
@@ -189,12 +200,12 @@ spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 ```
 
-- <YOUR_GMAIL_ADDRESS>: địa chỉ Gmail dùng gửi email.
-- <YOUR_GMAIL_APP_PASSWORD>: App Password tạo từ trang quản lý Google Account (bật Xác thực 2 bước trước).
+- <YOUR_GMAIL_ADDRESS>: Gmail address used to send emails.
+- <YOUR_GMAIL_APP_PASSWORD>: App Password generated from Google Account management (enable 2-step verification first).
 
-### 3. OAuth2 (Tùy chọn)
+### 3. OAuth2 (Optional)
 
-Dự án hỗ trợ đăng nhập bằng Google OAuth2. Cập nhật thông tin trong `application.properties`:
+The project supports Google OAuth2 login. Update info in `application.properties`:
 
 ```properties
 spring.security.oauth2.client.registration.google.client-id=<YOUR_GOOGLE_CLIENT_ID>
@@ -202,23 +213,23 @@ spring.security.oauth2.client.registration.google.client-secret=<YOUR_GOOGLE_CLI
 spring.security.oauth2.client.registration.google.scope=email,profile
 ```
 
-- Lấy `client-id` và `client-secret` từ [Google Cloud Console](https://console.cloud.google.com/).
-- Cấu hình redirect URI: `{baseUrl}/login/oauth2/code/google`.
+- Get `client-id` and `client-secret` from [Google Cloud Console](https://console.cloud.google.com/).
+- Set redirect URI: `{baseUrl}/login/oauth2/code/google`.
 
 ---
 
-## 📌 Lưu ý khi chạy project
+## 📌 Project Running Notes
 
-- **Chạy đồng thời**: Đảm bảo backend và cả hai frontend (user, admin) đều được chạy để project hoạt động đầy đủ.
-- **CORS**: Nếu gặp lỗi CORS, kiểm tra và cập nhật `allowed-origins` trong `application.properties`:
+- **Run concurrently**: Make sure backend and both frontends (user, admin) are running for full functionality.
+- **CORS**: If you encounter CORS errors, check and update `allowed-origins` in `application.properties`:
   ```properties
   spring.web.cors.allowed-origins=http://localhost:3000,http://localhost:3001
   spring.web.cors.allowed-methods=GET,POST,PUT,DELETE
   spring.web.cors.allowed-headers=Authorization,Content-Type
   spring.web.cors.allow-credentials=true
   ```
-- **Kiểm tra kết nối**: Đảm bảo URL, username, password của database và Cloudinary đúng trước khi chạy.
-- **Môi trường**: Đặt biến môi trường cho `${MAIL_USERNAME}` và `${MAIL_PASSWORD}` nếu cần.
+- **Check connections**: Ensure database and Cloudinary URLs, usernames, and passwords are correct before running.
+- **Environment**: Set environment variables for `${MAIL_USERNAME}` and `${MAIL_PASSWORD}` if needed.
 
 ---
 
